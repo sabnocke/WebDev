@@ -15,7 +15,7 @@ def create_event():
     description = request.form['description']
     start_date = request.form['start_date']
     end_date = request.form['end_date']
-    with open(file='database.txt', encoding='utf-8', mode='a') as file:
+    with open(file='database.json', encoding='utf-8', mode='a') as file:
         file.write(
             f'{title}\n{description}\n{start_date}\n{end_date}'
         )
