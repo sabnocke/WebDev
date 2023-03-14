@@ -1,12 +1,9 @@
 from sqlalchemy import create_engine, text, select
 from sqlalchemy.orm import Session
 
-'''db_connection_string = "mysql+pymysql://r71icbeuey7ukv6tt5jo:pscale_pw_xjaPO2lDWZuFysBmjfdJvXcyYC479PHdyuJ9touA5Hf@eu" \
-                       "-central.connect.psdb.cloud/heap?charset=utf8mb4"'''
 db_connection_string = (
-    "mysql+pymysql://r71icbeuey7ukv6tt5jo:pscale_pw_xjaPO2lDWZuFysBmjfdJvXcyYC479PHdyuJ9touA5Hf@eu"
-    "-central.connect.psdb.cloud/heap"
-    "?ssl_ca=cacert-2023-01-10.pem")
+    "mysql+pymysql://user:password@connect/db_name"
+    "?ssl_ca='cert'")
 
 engine = \
     create_engine(db_connection_string)
